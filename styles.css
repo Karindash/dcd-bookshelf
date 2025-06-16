@@ -23,15 +23,19 @@ header {
 }
 
 main {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr minmax(300px, 25%);
   gap: 1rem;
   padding: 1rem 2rem;
   margin-top: 0.5rem;
 }
 
+.input-section {
+  flex: 8;
+}
 
 aside {
+  flex: 1;
   background-color: #e9f0fa;
   padding: 1rem;
   border-radius: 8px;
