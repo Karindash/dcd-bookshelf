@@ -111,15 +111,15 @@ function makeBookElement(book) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const inputBookForm = document.getElementById('inputBook');
+  const inputBookForm = document.getElementById('bookForm');
   const searchBookForm = document.getElementById('searchBook');
 
   inputBookForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    const title = document.getElementById('inputBookTitle').value;
-    const author = document.getElementById('inputBookAuthor').value;
-    const year = document.getElementById('inputBookYear').value;
-    const isComplete = document.getElementById('inputBookIsComplete').checked;
+    const title = document.getElementById('bookFormTitle').value;
+    const author = document.getElementById('bookFormAuthor').value;
+    const year = document.getElementById('bookFormYear').value;
+    const isComplete = document.getElementById('bookFormIsComplete').checked;
 
     const generatedID = generateId();
     const bookObject = generateBookObject(generatedID, title, author, year, isComplete);
@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener(RENDER_EVENT, function (e) {
-  const incompleteBookshelfList = document.getElementById('incompleteBookshelfList');
-  const completeBookshelfList = document.getElementById('completeBookshelfList');
+  const incompleteBookshelfList = document.getElementById('incompleteBookList');
+  const completeBookshelfList = document.getElementById('completeBookList');
 
   incompleteBookshelfList.innerHTML = '';
   completeBookshelfList.innerHTML = '';
